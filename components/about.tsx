@@ -18,7 +18,24 @@ export function About() {
     "Bootstrap",
     "PostgreSQL",
     "Git",
+    "GitHub",
     "VS Code",
+    "Next.js",
+    "Tailwind",
+    "MySQL",
+    "Generative AI",
+    "Prompt Engineering",
+    "API REST",
+    "Swagger",
+    "Postman",
+    "Cypress",
+    "Manual Testing",
+    "Functional Testing",
+    "Regression Testing",
+    "E2E Testing",
+    "Agile/Scrum",
+    "Test Case Design",
+    "Bug Reporting"
   ]
 
   return (
@@ -36,7 +53,7 @@ export function About() {
             <div className="animate-section order-2 md:order-1">
               <div className="aspect-square max-w-sm mx-auto">
                 <Image
-                  src="/fotoPerfil.jpg"
+                  src="/yo.jpg"
                   alt="Emiliano Langorta - Full Stack Developer"
                   width={400}
                   height={400}

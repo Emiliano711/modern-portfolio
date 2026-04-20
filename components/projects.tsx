@@ -39,7 +39,7 @@ export function Projects() {
     {
       title: "GuitarLA",
       description: t("guitarDescription"),
-      image: "/guitar-project.png",
+      image: "/guitar.png",
       technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
       liveUrl: "https://guitarpage.vercel.app/",
       githubUrl: "#",
@@ -47,7 +47,7 @@ export function Projects() {
     {
       title: "Jardim",
       description: t("jardimDescription"),
-      image: "/jardim-project.png",
+      image: "/jardim.png",
       technologies: ["React", "Next.js", "Tailwind CSS"],
       liveUrl: "https://www.empresajardim.com/",
       githubUrl: "#",
@@ -56,7 +56,7 @@ export function Projects() {
     {
       title: "HackFlix",
       description: t("hackflixDescription"),
-      image: "/hackflix-project.png",
+      image: "/hackflix.png",
       technologies: ["React", "JavaScript", "CSS", "API Integration"],
       liveUrl: "https://hackflix-zeta-five.vercel.app/",
       githubUrl: "#",
