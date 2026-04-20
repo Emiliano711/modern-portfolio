@@ -153,6 +153,11 @@ export const translations = {
     projectsTitle: "Proyectos",
     guitarDescription:
       "Plataforma e-commerce para venta de guitarras con catálogo moderno, funcionalidad de carrito de compras y diseño responsivo. Construida con Next.js y optimizada para rendimiento.",
+    jardimDescription:
+      "Sitio web corporativo desarrollado para una empresa real de servicios funerarios. Presenta diseño elegante, catálogo de servicios, galería de productos y presentación profesional adaptada a las necesidades del negocio.",
+    jardimBadge: "Proyecto Cliente Real",
+    hackflixDescription:
+      "Clon de plataforma de streaming de películas con filtros de rating, catálogo dinámico e interfaz moderna. Construido como proyecto de aprendizaje para practicar patrones de React e integración de APIs.",
     viewLive: "Ver Sitio",
     viewCode: "Ver Código",
 

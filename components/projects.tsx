@@ -44,6 +44,23 @@ export function Projects() {
       liveUrl: "https://guitarpage.vercel.app/",
       githubUrl: "#",
     },
+    {
+      title: "Jardim",
+      description: t("jardimDescription"),
+      image: "/jardim-project.png",
+      technologies: ["React", "Next.js", "Tailwind CSS"],
+      liveUrl: "https://www.empresajardim.com/",
+      githubUrl: "#",
+      badge: t("jardimBadge"),
+    },
+    {
+      title: "HackFlix",
+      description: t("hackflixDescription"),
+      image: "/hackflix-project.png",
+      technologies: ["React", "JavaScript", "CSS", "API Integration"],
+      liveUrl: "https://hackflix-zeta-five.vercel.app/",
+      githubUrl: "#",
+    },
   ]
 
   return (
@@ -64,6 +81,11 @@ export function Projects() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                {project.badge && (
+                  <span className="absolute top-3 right-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
+                    {project.badge}
+                  </span>
+                )}
               </div>
 
               <div className="p-6">
