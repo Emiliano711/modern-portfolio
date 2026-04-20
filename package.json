@@ -1,0 +1,38 @@
+{
+  "name": "modern-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "eslint .",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.1.0",
+    "@vercel/analytics": "^1.4.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "gsap": "^3.12.5",
+    "immer": "latest",
+    "lucide-react": "^0.469.0",
+    "next": "15.1.11",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "1.0.7",
+    "tw-animate-css": "1.4.0",
+    "zustand": "^4.4.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.9",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "15.1.3",
+    "postcss": "8.5.6",
+    "tailwindcss": "^4.1.9",
+    "typescript": "^5"
+  }
+}
