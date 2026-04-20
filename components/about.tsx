@@ -18,7 +18,24 @@ export function About() {
     "Bootstrap",
     "PostgreSQL",
     "Git",
+    "GitHub",
     "VS Code",
+    "Next.js",
+    "Tailwind",
+    "MySQL",
+    "Generative AI",
+    "Prompt Engineering",
+    "API REST",
+    "Swagger",
+    "Postman",
+    "Cypress",
+    "Manual Testing",
+    "Functional Testing",
+    "Regression Testing",
+    "E2E Testing",
+    "Agile/Scrum",
+    "Test Case Design",
+    "Bug Reporting"
   ]
 
   return (
