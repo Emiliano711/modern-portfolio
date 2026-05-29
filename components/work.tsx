@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useLanguage } from "@/hooks/use-language"
@@ -40,7 +41,7 @@ export function Work() {
   return (
     <section id="work" className="py-24 px-4 sm:px-6 overflow-hidden">
       <div className="container mx-auto max-w-6xl">
-        <div className="animate-section text-center mb-16">
+        <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">{t("workTitle")}</h2>
         </div>
 
@@ -48,13 +49,17 @@ export function Work() {
           {projects.map((project, index) => (
             <Card
               key={project.title}
-              className="animate-card group overflow-hidden border-border hover:shadow-xl transition-all duration-500 hover:-translate-y-2 w-full"
+              className="group overflow-hidden border-border hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-full animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative overflow-hidden">
-                <img
+              <div className="relative overflow-hidden h-48">
+                <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <div className="absolute top-4 right-4">
                   <Badge variant="secondary" className="bg-primary/90 text-primary-foreground text-xs">
