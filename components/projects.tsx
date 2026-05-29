@@ -1,39 +1,11 @@
 "use client"
 
-import { useEffect, useRef } from "react"
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import { useLanguage } from "@/hooks/use-language"
 
-gsap.registerPlugin(ScrollTrigger)
-
 export function Projects() {
-  const sectionRef = useRef<HTMLElement>(null)
   const { t } = useLanguage()
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        ".project-card",
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          stagger: 0.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-          },
-        },
-      )
-    }, sectionRef)
-
-    return () => ctx.revert()
-  }, [])
 
   const projects = [
     {
@@ -64,22 +36,25 @@ export function Projects() {
   ]
 
   return (
-    <section ref={sectionRef} id="projects" className="animate-section py-20 px-6 md:px-12 lg:px-24">
+    <section id="projects" className="py-20 px-6 md:px-12 lg:px-24">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-12 text-center font-serif text-4xl font-bold md:text-5xl">{t("projectsTitle")}</h2>
+        <h2 className="mb-12 text-center font-serif text-4xl font-bold md:text-5xl animate-fade-in">{t("projectsTitle")}</h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:shadow-xl"
+              className="group overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:shadow-xl animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative aspect-video overflow-hidden">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
                 />
                 {project.badge && (
                   <span className="absolute top-3 right-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
