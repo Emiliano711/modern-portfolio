@@ -53,7 +53,7 @@ export function About() {
             <div className="animate-section order-2 md:order-1">
               <div className="aspect-square max-w-sm mx-auto">
                 <Image
-                  src="/foto_cv.jpeg"
+                  src="/cvFoto.jpeg"
                   alt="Emiliano Langorta - Full Stack Developer"
                   width={400}
                   height={400}
